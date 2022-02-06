@@ -10,6 +10,8 @@ var symbol string
 	var num1 int
 	var num2 int
 	var option string
+	var totalResult int
+	   
 	
 	
 
@@ -28,12 +30,12 @@ fmt.Println("Hey Welcome")
 
 func calculate(number1 int, number2 int, operator string){
 	
-	
-	    var result int
+		
+	var result int	
 	
 	if operator == "+" {
 		result = number1 + number2
-	
+		totalResult += result
 	
 	}else if operator == "-" {
 		result = number1 - number2
@@ -57,7 +59,7 @@ func calculate(number1 int, number2 int, operator string){
 		fmt.Print("Invalid operator\n")
 	}
 	
-	fmt.Printf("The result is %v\n",result)
+	fmt.Printf("The result is %v\n",totalResult)
 	
 }
 
@@ -73,8 +75,8 @@ func collectUserInput(){
 	fmt.Scan(&num2)
 
 	fmt.Println("Press y to continue or n to stop")
-	fmt.Scan(&option)
-	
+	fmt.Scan(&option)	
+
 
 }
 
@@ -106,4 +108,5 @@ func collectUserInput2(){
 
 	fmt.Println("Will you like to continue the calculation")
 	fmt.Scan(&option)
+	
 }
