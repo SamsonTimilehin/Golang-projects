@@ -39,11 +39,11 @@ func calculate(number1 int, number2 int, operator string){
 	
 	}else if operator == "-" {
 		result = number1 - number2
-		
+		totalResult -= result
 	
 	}else if operator == "*" {
 		result = number1 * number2
-		
+		totalResult *= result
 	
 	}else if operator == "/" {
 	
@@ -52,7 +52,7 @@ func calculate(number1 int, number2 int, operator string){
 		}else {
 	
 		result = number1 / number2
-		
+		totalResult /= result
 	
 		}
 	}else {
